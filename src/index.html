@@ -3,25 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple HTML Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>Welcome to My Simple HTML Page</h1>
-    <p>This is a simple paragraph of text to demonstrate a basic HTML structure.</p>
-
+    <div class="container">
+        <header>
+            <h1>Dashboard</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="overview">
+                <h2>Overview</h2>
+                <div class="card">Total Users: <span id="total-users">0</span></div>
+                <div class="card">Total Sales: <span id="total-sales">0</span></div>
+            </section>
+            <section id="analytics">
+                <h2>Analytics</h2>
+                <canvas id="myChart"></canvas>
+            </section>
+            <section id="settings">
+                <h2>Settings</h2>
+                <p>Adjust your preferences here.</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
